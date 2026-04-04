@@ -1,9 +1,11 @@
 .header__wrapper {
     width: 100%;
-    height: 85px;
+    min-height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    padding: 12px 0;
 }
 
 .header__nav-list{
@@ -17,7 +19,7 @@
     font-size: 20px;
     font-weight: 500;
     color: var(--dark-color);
-    white-space: no-wrap;
+    white-space: nowrap;
 }
 
 .header__nav-link:hover{
@@ -25,7 +27,8 @@
 }
 
 .header__nav-link:focus-visible{
-    color: 2px solid var(--light-green-color)
+    outline: 2px solid var(--light-green-color);
+    outline-offset: 2px;
 }
 
 .btn--signin{
@@ -40,19 +43,44 @@
     column-gap: 10px;
 }
 
-@media (max-width: 992px){
-    .header__nav-link{
-        font-size: 16px;
+@media (max-width: 1200px){
+    .header__nav-list{
+        column-gap: 32px;
     }
 
-    .btn{
-        width: 120px;
+    .header__nav-link{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px){
+    .header__nav-link{
         font-size: 16px;
     }
 }
 
 @media (max-width: 768px){
+    .header__wrapper{
+        min-height: 72px;
+    }
+
     .header__nav{
         display: none;
+    }
+}
+
+@media (max-width: 576px){
+    .header__wrapper{
+        gap: 12px;
+    }
+
+    .header__actions{
+        column-gap: 8px;
+    }
+
+    .header__actions .btn{
+        width: 120px;
+        height: 42px;
+        font-size: 15px;
     }
 }

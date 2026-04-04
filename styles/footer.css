@@ -1,0 +1,24 @@
+.footer{
+    background-color: var(--dark-green-color);
+}
+
+.footer .container{
+    padding-block: 70px 100px;
+    color: var(--light-color);
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.footer__header {
+    font-size: 40px;
+}
+
+@media (max-width:580px) {
+    .footer__content {
+    align-items: center;
+
+}
+}
